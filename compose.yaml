@@ -1,0 +1,12 @@
+services:
+  oracle:
+    # Always use fqdn *and* digest for determinism
+    image: ghcr.io/flashbackai/flashback-encryption:1.0
+    platform: linux/amd64
+    environment:
+      # These three come from ROFL secret store (see rofl.yaml)
+      - RPC_URL
+      - CONTRACT_ADDRESS
+      - PRIVATE_KEY
+    volumes:
+      - /run/rofl-appd.sock:/run/rofl-appd.sock   # mandatory for enclave agent

@@ -1,0 +1,211 @@
+  [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes21",
+          "name": "_roflAppID",
+          "type": "bytes21"
+        },
+        {
+          "internalType": "address",
+          "name": "_initialOracle",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "RoflOriginNotAuthorizedForApp",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "SubcallError",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "entryId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "encryptionKey",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "iv",
+          "type": "bytes"
+        }
+      ],
+      "name": "EncryptedDataSubmitted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "entryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "PlaintextSubmitted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getEntry",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "plaintext",
+              "type": "string"
+            },
+            {
+              "internalType": "bytes",
+              "name": "encryptedData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "encryptionKey",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "iv",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bool",
+              "name": "encrypted",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct DataEntry",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPendingIndexes",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracle",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "roflAppID",
+      "outputs": [
+        {
+          "internalType": "bytes21",
+          "name": "",
+          "type": "bytes21"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "name": "setOracle",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_encryptedData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_key",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_iv",
+          "type": "bytes"
+        }
+      ],
+      "name": "submitEncryptedData",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_plaintext",
+          "type": "string"
+        }
+      ],
+      "name": "submitPlaintext",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
