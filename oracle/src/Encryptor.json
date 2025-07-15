@@ -1,0 +1,263 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "inRoflAppID",
+        "type": "bytes21",
+        "internalType": "bytes21"
+      },
+      {
+        "name": "inOracle",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "clearAll",
+    "inputs": [
+      
+    ],
+    "outputs": [
+      
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getRequestCount",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRequests",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes[]",
+        "internalType": "bytes[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getResults",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct Ciphertext[]",
+        "components": [
+          {
+            "name": "requestId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "payload",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "oracle",
+    "inputs": [
+      
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "roflAppID",
+    "inputs": [
+      
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes21",
+        "internalType": "bytes21"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "setOracle",
+    "inputs": [
+      {
+        "name": "newOracle",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "submitRequest",
+    "inputs": [
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "submitResult",
+    "inputs": [
+      {
+        "name": "cipher",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "requestId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "user",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "RequestSubmitted",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "requestId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ResultSubmitted",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "requestId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "InvalidRequestId",
+    "inputs": [
+      
+    ]
+  },
+  {
+    "type": "error",
+    "name": "RequestAlreadyProcessed",
+    "inputs": [
+      
+    ]
+  },
+  {
+    "type": "error",
+    "name": "RoflOriginNotAuthorizedForApp",
+    "inputs": [
+      
+    ]
+  },
+  {
+    "type": "error",
+    "name": "SubcallError",
+    "inputs": [
+      
+    ]
+  },
+  {
+    "type": "error",
+    "name": "Unauthorized",
+    "inputs": [
+      
+    ]
+  },
+  {
+    "type": "error",
+    "name": "UnauthorizedOracle",
+    "inputs": [
+      
+    ]
+  }
+]

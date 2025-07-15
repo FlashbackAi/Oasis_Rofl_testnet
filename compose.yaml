@@ -1,11 +1,11 @@
 services:
   oracle:
-    # Always use fqdn *and* digest for determinism
-    image: ghcr.io/flashbackai/flashback-encryption:1.0
+    image: ghcr.io/flashbackai/flashback-encryption:latest
     platform: linux/amd64
     environment:
-      - PRIVATE_KEY=${PRIVATE_KEY}
-      - CONTRACT_ADDRESS=${CONTRACT_ADDRESS}
-      - RPC_URL=${RPC_URL}
+      - SAPPHIRE_TESTNET_RPC=https://testnet.sapphire.oasis.io
+      - ORACLE_PRIVATE_KEY=${PRIVATE_KEY}
+      - CONTRACT_ADDRESS=0xE52462AaD45d16132732F13A87eBC9EA0fef30dE
+      - ROFL_APP_ID=0x00d7b499d75788746296e1aae4bfff8de4a74be2df
     volumes:
       - /run/rofl-appd.sock:/run/rofl-appd.sock   # mandatory for enclave agent

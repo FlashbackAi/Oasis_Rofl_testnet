@@ -32,21 +32,17 @@ deployments:
           min_tcb_evaluation_data_number: 18
           tdx: {}
       enclaves:
-        - id: iRHH4OLSb2dZ7yp6SY2A24mxOwgbI/H+9yJyiN50OiUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-        - id: WmcXsEXCRZ8l3he/R4fVCdjpiL+3vLTdZpz5PanCIEoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: eFQ55k5L+y4hKDIbei6EVJM/40g7WKpD/PzBXl8slPgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        - id: TUr23wxEHomG9WCgCh08oMiAie1tahG0AY5XBpyuZdgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
       endorsements:
         - any: {}
       fees: endorsing_node
       max_expiration: 3
     secrets:
-      - name: RPC_URL
-        value: pGJwa1ggh9/PjqscaJfhyEKRiJ5KViNsTWe++w1qVWfX5LMeHXJkbmFtZVe5Wk2Bjr+p+pEEkma6MWzJUc8QUTxMDGVub25jZU/14zK8rp+T02vnhfPMpahldmFsdWVYMhr6BZKHxaLd1kg8nbaQM1L8kjsYZOQ4DDMMlkrVEQeFfIGeF3ZIZAjmoyA6v9KHrm63
-      - name: CONTRACT_ADDRESS
-        value: pGJwa1gg9LZdIbiCC4bkRn+M2HBXGjmpcWbpJ2ZMeBIne1xzdjZkbmFtZVgggWKWSrbtMwrKWYU0eo7BDCs06Nou4HtAQr+XbFKA1r5lbm9uY2VPejmjx8QJbxUOLw88tZ74ZXZhbHVlWDtjAzhGO2BMQn4mAZc0QYAoT3r4ms66YXwVSXfHzTYiHo8OD5lV3BFe6lx821e2ZuYcNBj6UukLO2DIwQ==
       - name: PRIVATE_KEY
-        value: pGJwa1ggokvU0wef2F6O75Xz9BbgJsIWgaEDXhCqT2GcU6EVPn1kbmFtZVgbwU9dSzRHL41tgXoJlV8O66UWDFV1BCf+4aA/ZW5vbmNlT+eg00J1EOE+7ORZtGX4d2V2YWx1ZVhTi5cvypior89F+hHTHTyL6kVA+VFmoPhgBpKWPADWFzesfSSh3BdiUYfaYs3GMbGJ97PvrP5Q1PXW7zriSI3MYPvseU1RCrKvsik7rhGcnQylkfE=
+        value: pGJwa1ggFebkUGjhTNuYlNpmCK1RzwJs+xT/JoJPGaHZQcXDYhNkbmFtZVgbsfURTZDKX5T+QOx5qlWHumIzfJVlrS/1xDCqZW5vbmNlT/NB36LMZFLepcVz5Onv/2V2YWx1ZVhTKCNztdOlgMLhKvXDZ6SCBwXgvlFVdhekKus5HxvIylvJUVELvDE9emUGOKvITKhKhHLJqtiMWGRZgADNQcaZ7BkzKZPrKTlXP26oOhKv7nhdFr4=
     machines:
       default:
         provider: oasis1qp2ens0hsp7gh23wajxa4hpetkdek3swyyulyrmz
         offer: playground_short
-        id: 000000000000019f
+        id: 00000000000001d1
