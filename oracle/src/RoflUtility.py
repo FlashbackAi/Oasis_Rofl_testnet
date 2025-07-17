@@ -51,7 +51,6 @@ class RoflUtility:
         """
 
         payload = {
-            "key_id": "flashback-test",
             "tx": {
                 "kind": "eth",
                 "data": {
@@ -62,7 +61,7 @@ class RoflUtility:
                     "data":  strip_0x(tx["data"])
                 },
             },
-            "encrypt": True,
+            "encrypt": False,
         }
 
         # ---- call rofl-appd ----------------------------------------------------
